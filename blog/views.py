@@ -3,15 +3,25 @@ from django.shortcuts import render
 # Create your views here.
 
 def blog(request):
-    print('home')
+
+    context = {
+        'text': 'Iniciando Blog'
+    }
+    
     return render(
         request,
-        'blog/index.html'
+        'blog/index.html',
+        context
     )
 
 def exemplo(request):
-    print('exemplo')
+
+    context = {
+            'text': 'Iniciando Exemplo'
+        }
+
     return render(
         request,
-        'blog/exemplo.html'
+        'blog/exemplo.html',
+        context
     )
