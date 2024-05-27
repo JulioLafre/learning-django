@@ -6,7 +6,7 @@ from . import data
 def blog(request):
 
     context = {
-        'text': 'Iniciando Blog',
+        #'text': 'Iniciando Blog',
         'posts': data.posts
     }
     
