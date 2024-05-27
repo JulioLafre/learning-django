@@ -16,6 +16,21 @@ def blog(request):
         context
     )
 
+
+
+def post(request, id):
+
+    context = {
+        #'text': 'Iniciando Blog',
+        'posts': data.posts
+    }
+    
+    return render(
+        request,
+        'blog/index.html',
+        context
+    )
+
 def exemplo(request):
 
     context = {
