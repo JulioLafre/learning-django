@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . import data
 from typing import Any
-from django.http import HttpRequest
+from django.http import HttpRequest, Http404
 
 # Create your views here.
 
@@ -27,7 +27,7 @@ def post(request:HttpRequest, post_id:int):
             break
 
     if found_post is None:
-        raise Exception('Post not exist')
+        raise Http404('Post not exist')
 
     context = {
         #'text': 'Iniciando Blog',
